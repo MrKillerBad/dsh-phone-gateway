@@ -1,0 +1,8 @@
+url: https://github.com/MrKillerBad/dsh-phone-gateway/tree/main/dsh-phone-gateway
+name: MrKillerBad/dsh-phone-gateway#dsh-phone-gateway
+category: tools
+tarball: https://github.com/MrKillerBad/dsh-phone-gateway/releases/latest/download/dsh-phone-gateway.tgz
+description:
+  en: 'Control the DSH running on your computer from a phone on the same Wi-Fi: UDP discovery, pairing codes, one control seat, and a native Android app.'
+  zh: '用手机通过局域网控制电脑上正在运行的 DSH：自动发现地址、配对码、单控制席位，外加原生 Android APP。'
+icon: https://raw.githubusercontent.com/MrKillerBad/dsh-phone-gateway/main/android/res/mipmap-xxhdpi/ic_launcher.png

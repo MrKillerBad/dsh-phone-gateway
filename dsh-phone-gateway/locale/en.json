@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Phone gateway",
+    "description": "Lets a phone on the same Wi-Fi or hotspot reach this computer's DSH: the address is discovered automatically, and one pairing makes it permanent."
+  }
+}

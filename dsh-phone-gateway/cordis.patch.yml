@@ -1,0 +1,3 @@
+- insert:
+    - id: lan-gateway
+      name: 'dsh-phone-gateway'
