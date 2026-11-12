@@ -4,7 +4,7 @@
 Let a phone reach the DeepSeek Harness that is already running on your computer, over the
 same Wi-Fi or hotspot. One process, no second instance, no public network.
 
-[![version](https://img.shields.io/badge/version-0.1.0-blue)]() [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![version](https://img.shields.io/badge/version-0.1.2-blue)]() [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 ---
 
