@@ -4,7 +4,7 @@
 > 它假定读者没有任何本次对话的记忆：读完这一份，应当能独立修改插件、重新构建 APP、
 > 跑通全部测试，并且不会再踩一遍已经踩过的坑。
 >
-> 最后更新：2026-11-11 · 对应版本 **0.1.0（versionCode 1）**
+> 最后更新：2026-11-11 · 对应版本 **0.1.2（versionCode 1）**
 
 ---
 
@@ -100,7 +100,7 @@ deepseek-dshbridge/
 │       └── ws-proxy.js              ← WebSocket 升级的原始字节管道
 │
 ├── android/                         ← APP（2 个 Java 文件，约 1900 行）
-│   ├── AndroidManifest.xml          ← versionCode 1 / versionName 0.1.0
+│   ├── AndroidManifest.xml          ← versionCode 1 / versionName 0.1.2
 │   ├── build/build.ps1              ← 无 Gradle 的完整构建脚本
 │   ├── build/dsh-phone-gateway.apk            ← 签名产物
 │   ├── build/dsh-phone-gateway.keystore       ← **签名密钥，绝不能删**（口令见本地 `.secrets.local`，不入库）
