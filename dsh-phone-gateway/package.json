@@ -1,6 +1,6 @@
 {
   "name": "dsh-phone-gateway",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": false,
   "type": "module",
   "description": "Reach the DeepSeek Harness running on your computer from a phone on the same Wi-Fi: UDP discovery, pairing, one control seat, and a native Android app. · 让手机通过局域网访问这台电脑上正在运行的 DSH。",
