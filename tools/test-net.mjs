@@ -46,10 +46,24 @@ console.log('3) loopback always passes, whatever the config')
 console.log('4) same-subnet gating uses this machine\'s real interfaces')
 {
   const interfaces = listInterfaces()
-  const v4 = interfaces.find((entry) => entry.family === 'IPv4')
-  console.log(`     machine IPv4: ${v4 === undefined ? '(none)' : `${v4.address}/${v4.netmask}`}`)
+  /**
+   * A usable interface needs room for a neighbor, which a /31 or /32 has not got.
+   *
+   * Picking the first IPv4 blindly was wrong on a machine with a Tailscale adapter:
+   * that one is a /32, so "change the last octet" produced an address on a DIFFERENT
+   * host that the subnet rule correctly refused — the test, not the rule, was wrong.
+   */
+  const v4 = interfaces.find((entry) => {
+    if (entry.family !== 'IPv4') return false
+    const prefix = Number(String(entry.netmask ?? '').split('.').reduce(
+      (bits, octet) => bits + (Number(octet) >>> 0).toString(2).replace(/0/g, '').length,
+      0,
+    ))
+    return prefix > 0 && prefix <= 30
+  })
+  console.log(`     machine IPv4: ${v4 === undefined ? '(none with a neighbor)' : `${v4.address}/${v4.netmask}`}`)
   if (v4 !== undefined) {
-    // A neighbor inside the same /24 as the real interface, not the interface itself.
+    // A neighbor inside the same subnet as the real interface, not the interface itself.
     const parts = v4.address.split('.')
     const neighbor = `${parts[0]}.${parts[1]}.${parts[2]}.250`
     const otherNetwork = '203.0.113.7'
